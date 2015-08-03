@@ -10,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
+
 class FileOperation {
 	
 	 ArrayList<HashMap<String, Path>> lista = new ArrayList<HashMap<String,Path>>();
@@ -55,17 +56,18 @@ class FileOperation {
 	 }
 	
 	 // API only available from Java 1.8
-	 public ArrayList<String> listFilesinDir(String dir) throws IOException{
-		 
-		 ArrayList<String> temp = new ArrayList<>();
-		 
-		 Files.walk(Paths.get(dir)).forEach(filePath -> {
-			    if (Files.isRegularFile(filePath)) {
-			        temp.add(filePath.toString());
-			    }
-			});
-		 
-		 return temp;
-	 }
+//	 public ArrayList<String> listFilesinDir(String dir) throws IOException{
+//		 
+//		 ArrayList<String> temp = new ArrayList<>();
+//		 Path path = Paths.get(dir);
+//		 try {
+//			//Files.walk(Paths.get(dir)).forEach(sysout);
+//					
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		 
+//		 return temp;
+//	 }
 
 }
